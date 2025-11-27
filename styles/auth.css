@@ -16,6 +16,10 @@
   gap: 6rem;
 }
 
+.auth-text {
+  margin-bottom: 200px;
+}
+
 .auth-text h1 {
   font-size: 4.5rem;
   margin-bottom: 1.5rem;
@@ -112,6 +116,12 @@
     text-align: center;
     gap: 4rem;
   }
+
+  .auth-text {
+  margin-bottom: 0px;
+}
   .auth-text h1 { font-size: 3.5rem; }
   .auth-form-container { width: 100%; max-width: 420px; }
 }
+
+
