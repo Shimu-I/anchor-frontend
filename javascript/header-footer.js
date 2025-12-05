@@ -114,3 +114,5 @@ function logout() {
   localStorage.removeItem("userAvatar");
   location.reload();
 }
+
+
