@@ -43,6 +43,7 @@ body.fade-in {
   gap: 25px;
   flex: 1;
   min-width: 500px;
+  padding-left: 200px;
 }
 
 .profile-avatar {
@@ -118,10 +119,11 @@ body.fade-in {
 
 .stat-box {
   background-color: #0f3a3a;
-  padding: 20px 25px;
+  padding: 20px 10px;
   border-radius: 8px;
   min-width: 200px;
   border: 1px solid #1a4a4a;
+  height: fit-content;
 }
 
 .stat-box h3 {
