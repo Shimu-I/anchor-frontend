@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anchor - User Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/Lender.css">
+</head>
+<body>
+
+    <div class="frame">
+        <header>
+            <div class="header-content">
+                <div class="logo">Anchor</div>
+                <nav>
+                    <a href="#">Home</a>
+                    <a href="#">Loan</a>
+                    <a href="#">Funding</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </nav>
+                <div class="user-actions">
+                    <div class="user-box">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User Avatar" class="user-avatar-small">
+                        <span>David-user</span>
+                    </div>
+                    <button class="log-out-btn">Log Out</button>
+                </div>
+            </div>
+            <div class="header-line"></div>
+        </header>
+
+        <div class="container">
+            <h1 class="page-title">User Profile</h1>
+
+            <div class="profile-header">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David" class="profile-img">
+                <div class="profile-info-group">
+                    <div class="profile-details">
+                        <p class="detail-bold">User Name: **David-user**</p>
+                        <p>User ID: 85998765</p>
+                        <p>Email: user@gmail.com</p>
+                        <p class="rating">Your rating: 4.5 form 40 reviews</p>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn-primary">Edit</button>
+                        <button class="btn-primary">Notifications</button>
+                    </div>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <h3>Total Funds Collected</h3>
+                        <div class="stat-value">৳0</div>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Total Loans Collected</h3>
+                        <div class="stat-value">৳0</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Loan Request (0)</h2>
+                <div class="divider"></div>
+                <p class="section-placeholder">N/A</p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Funding Post (0)</h2>
+                <div class="divider"></div>
+                <p class="section-placeholder">N/A</p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Provided Loans (2)</h2>
+                <div class="divider"></div>
+
+                <div class="loans-grid">
+                    <div class="loan-card">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Elli" class="loan-avatar">
+                        <div class="loan-info">
+                            <h4>User Name: Elli_user</h4>
+                            <div class="loan-detail">Category: <span class="category-tag">College</span></div>
+                            <div class="loan-detail">Amount needed: 5000 taka</div>
+                            <div class="loan-detail">Date: 12 nov, 2025</div>
+                            <div class="loan-actions">
+                                <span class="status offered">Offered</span>
+                                <a href="#" class="send-money-btn offered-disabled">Send Money</a>
+                            </div>
+                            <a href="#" class="view-details-btn">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="loan-card">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Elli" class="loan-avatar">
+                        <div class="loan-info">
+                            <h4>User Name: Elli_user</h4>
+                            <div class="loan-detail">Category: <span class="category-tag">College</span></div>
+                            <div class="loan-detail">Amount needed: 5000 taka</div>
+                            <div class="loan-detail">Date: 12 nov, 2025</div>
+                            <div class="loan-actions">
+                                <span class="status accepted">Accepted</span>
+                                <a href="#" class="send-money-btn accepted-enabled">Send Money</a>
+                            </div>
+                            <a href="#" class="view-details-btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            © 2025 Team Syntax_Error. All rights reserved.
+        </footer>
+    </div>
+
+    <script src="/javascript/Lender.js"></script>
+
+</body>
+</html>
