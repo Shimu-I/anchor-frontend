@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Fundraiser</title>
+    <link rel="stylesheet" href="/styles/funding_interface_form.css">
+    <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/header-footer.css">
+</head>
+<body>
+      <!-- Header -->
+  <div id="headerPlaceholder"></div>
+
+    <div class="container">
+        <h1>Create a Fundraiser</h1>
+        
+        <form id="fundraiserForm">
+            <!-- Category -->
+            <div class="form-group">
+                <select id="category" class="dropdown">
+                    <option value="">Category</option>
+                    <option value="education">Education</option>
+                    <option value="medical">Medical</option>
+                    <option value="community">Community</option>
+                    <option value="emergency">Emergency</option>
+                </select>
+            </div>
+
+            <!-- 1. Fundraiser Title -->
+            <div class="form-group">
+                <label class="section-label">1. Fundraiser Title</label>
+                <input type="text" id="title" placeholder="Winter Clothes for Street Children" required>
+            </div>
+
+            <!-- 2. Summary of the Situation -->
+            <div class="form-group">
+                <label class="section-label">2. Summary of the Situation</label>
+                <textarea id="summary" placeholder="Summary" rows="4" required></textarea>
+            </div>
+
+            <!-- 3. Beneficiary Details -->
+            <div class="form-group">
+                <label class="section-label">3. Beneficiary Details</label>
+                <p class="helper-text">Who will receive help:</p>
+                
+                <div class="inline-group">
+                    <div class="inline-field">
+                        <label>Location:</label>
+                        <input type="text" id="location">
+                    </div>
+                    <div class="inline-field">
+                        <label>Number of people:</label>
+                        <input type="number" id="numPeople">
+                    </div>
+                </div>
+                
+                <div class="inline-field full-width">
+                    <label>Age group / Special condition (optional):</label>
+                    <input type="text" id="ageGroup">
+                </div>
+            </div>
+
+            <!-- 4. Purpose of Funding -->
+            <div class="form-group">
+                <label class="section-label">4. Purpose of Funding</label>
+                <p class="helper-text">What the money will be used for (select multiple):</p>
+                
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="purpose" value="clothes" checked>
+                        <span>Clothes</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="purpose" value="food">
+                        <span>Food</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="purpose" value="medical">
+                        <span>Medical Items</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="purpose" value="other">
+                        <span>Other</span>
+                    </label>
+                    <input type="text" id="otherPurpose" placeholder="type..." class="other-input">
+                </div>
+            </div>
+
+            <!-- 5. Fund Breakdown -->
+            <div class="form-group">
+                <label class="section-label">5. Fund Breakdown</label>
+                <p class="helper-text">User can add rows:</p>
+                
+                <div id="fundBreakdown">
+                    <div class="breakdown-header">
+                        <span>Item Name</span>
+                        <span>Quantity</span>
+                        <span>Cost per unit</span>
+                        <span>Total</span>
+                    </div>
+                    <div id="breakdownItems"></div>
+                </div>
+                
+                <button type="button" id="addItemBtn" class="add-btn">+ Add Item Button</button>
+                
+                <div class="total-section">
+                    <span>System auto-calculates:</span>
+                    <input type="text" id="totalAmount" value="Total Amount Needed " readonly>
+                </div>
+            </div>
+
+            <!-- 6. Proof & Verification -->
+            <div class="form-group">
+                <label class="section-label">6. Proof & Verification (Upload section)</label>
+                <p class="helper-text">User must upload at least 1:</p>
+                <ol class="upload-list">
+                    <li>Photos of incident / past work</li>
+                    <li>Short video</li>
+                    <li>Official letter / medical doc (optional)</li>
+                    <li>News report screenshot</li>
+                    <li>Location images</li>
+                </ol>
+                <button type="button" class="upload-btn">Upload 📎</button>
+                <input type="file" id="fileUpload" multiple hidden>
+            </div>
+
+            <!-- 7. Organizer Verification -->
+            <div class="form-group">
+                <label class="section-label">7. Organizer Verification <span class="required">*</span></label>
+                <p class="helper-text">Info fields:</p>
+                
+                <div class="field-group">
+                    <label>Full Name:</label>
+                    <input type="text" id="fullName" required>
+                </div>
+                
+                <div class="field-group">
+                    <label>Phone:</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                
+                <div class="field-group">
+                    <label>Social media link (optional):</label>
+                    <input type="url" id="socialMedia">
+                </div>
+                
+                <div class="field-group nid-group">
+                    <label>NID upload:</label>
+                    <div class="nid-upload">
+                        <input type="text" value="nid-document.jpeg" readonly>
+                        <button type="button" class="change-btn">Change</button>
+                        <input type="file" id="nidUpload" hidden>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Distribution / Action Plan -->
+            <div class="form-group">
+                <label class="section-label">8. Distribution / Action Plan</label>
+                <p class="helper-text">User explains:<br>- What they will distribute<br>- With whom (volunteers/team)</p>
+                <textarea id="actionPlan" rows="4"></textarea>
+            </div>
+
+            <!-- 9. Update Commitment -->
+            <div class="form-group">
+                <label class="section-label">9. Update Commitment</label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="updateCommitment" required>
+                    <span>I agree to provide updates during the entire fundraiser.</span>
+                </label>
+            </div>
+
+            <!-- 10. Payment Transparency -->
+            <div class="form-group">
+                <label class="section-label">10. Payment Transparency</label>
+                
+                <div class="radio-group">
+                    <label>Will you share receipts?</label>
+                    <div class="radio-options">
+                        <label class="radio-label">
+                            <input type="radio" name="shareReceipts" value="yes" checked>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="shareReceipts" value="no">
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="checkbox-group extra-funds">
+                    <label class="extra-funds-label">How will funds be used if extra amount remains?</label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="extraFunds" value="buyMore" checked>
+                        <span>Buy more items</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="extraFunds" value="donate" checked>
+                        <span>Donate to similar causes</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Final Confirmation -->
+            <div class="form-group">
+                <label class="checkbox-label confirmation">
+                    <input type="checkbox" id="confirmation" required>
+                    <span class="confirmation-text">I confirm that the information provided is accurate and I take full responsibility for any false or misleading details.</span>
+                </label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+      <!-- Footer -->
+  <div id="footerPlaceholder"></div>
+  
+  <script src="javascript/header-footer.js"></script>
+    <script src="/javascript/funding_interface_form.js"></script>
+</body>
+</html>
