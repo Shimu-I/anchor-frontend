@@ -11,17 +11,11 @@
             color: #fff;
             opacity: 0;
             transition: opacity 0.4s ease;
-            
-
         }
 
         body.fade-in {
             opacity: 1;
         }
-
-       
-
-     
 
         /* Main Container */
         .container {
@@ -30,10 +24,6 @@
             min-height: calc(100vh - 85px);
         }
 
-       
-
-
-        /* Main Content */
         .main-content {
             flex: 1;
             padding: 40px 60px;
