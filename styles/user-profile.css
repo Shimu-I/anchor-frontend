@@ -245,17 +245,21 @@ body.fade-in {
 
 /* Button Styles */
 .btn-view-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 100%;
   padding: 12px;
   background-color: #7dd3c0;
   color: #0a2e2e;
-  border: none;
   border-radius: 5px;
   font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
   margin-top: 15px;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
 }
 
 .btn-view-details:hover {
@@ -263,6 +267,11 @@ body.fade-in {
   transform: translateY(-2px);
 }
 
+.btn-view-details:visited {
+  color: #0a2e2e;
+  text-decoration: none;
+}
+ 
 .btn-view-small {
   padding: 5px 20px;
   background-color: #d97777;
