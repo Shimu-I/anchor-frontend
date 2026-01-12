@@ -316,24 +316,70 @@ main {
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
-  width: 170px;
+  width: 175px;
 }
 
+
+/* =========================
+   Base Styles
+   ========================= */
 .donate-btn {
   background: #00bfa5;
   color: white;
   border: none;
-
+  flex: 1;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 175px;
+  
+  /* Link reset properties */
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
 }
 
 .view-btn {
   background: #2B5159;
   color: white;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #00bfa5;
+  border: 1px solid #00bfa5;
+  flex: 1;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 175px;
+
+  /* Link reset properties */
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
 }
 
+/* =========================
+   State Enforcers
+   (Fixes the "after click" color change)
+   ========================= */
 
+/* 1. Force white text even if link was visited */
+.donate-btn:visited, 
+.view-btn:visited {
+    color: white;
+}
 
-/* or just remove max-width limits */
+/* 2. Remove underline on hover and keep white text */
+.donate-btn:hover, 
+.view-btn:hover {
+    text-decoration: none;
+    color: white;
+    /* Optional: Add a slight hover effect if you want */
+    opacity: 0.9; 
+}
+
+/* 3. Ensure it looks good while clicking */
+.donate-btn:active, 
+.view-btn:active {
+    color: white;
+    transform: translateY(1px); /* Little "press" effect */
+}
