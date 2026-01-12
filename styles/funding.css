@@ -241,14 +241,13 @@ main {
 
 .card p {
   font-size: 14px;
-  line-height: 1.1;
+  line-height: 1.3;
   /* important for consistent 3-line height */
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  /* show only 3 lines */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  display: -webkit-box;        /* Flexbox-like layout for multiline clamp */
+  -webkit-box-orient: vertical; 
+  -webkit-line-clamp: 3;       /* Show only 3 lines */
+  overflow: hidden;             /* Hide extra text */
+  text-overflow: ellipsis; 
   text-align: left;
   margin-bottom: -5px;
   color: #b8e6e0;
