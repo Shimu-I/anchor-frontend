@@ -268,16 +268,24 @@ body.fade-in {
   background-color: #d97777;
   color: #ffffff;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
+ text-decoration: none;
 }
 
 .btn-view-small:hover {
   background-color: #c76666;
   transform: scale(1.05);
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.btn-view-small:visited {
+  text-decoration: none;
+   border-radius: 20px;
 }
 
 /* Responsive Design */

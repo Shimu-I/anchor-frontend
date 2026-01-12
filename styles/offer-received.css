@@ -5,19 +5,17 @@
 }
 
 body {
-    background: #0A2E36;
-    font-family: 'Inter', sans-serif;
-    display: flex;
-    justify-content: center;
-    padding: 40px 20px;
+    background: #0a1f2f;
+   
+    
 }
 
 .main-container {
     width: 740px;
-    height: 530px;
-    background: #0A2E36;
-    border: 1px solid #1E5F60;
-    border-radius: 10px;
+    margin: auto;
+
+   
+    border: none; 
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -84,8 +82,7 @@ body {
 
 /* Offer Card */
 .offer-card {
-    width: 600px;
-    height: 251px;
+    
     background: #0E4D4E;
     border-radius: 5px;
     padding: 20px;
@@ -165,8 +162,7 @@ body {
 
 /* ONLY THIS BLOCK CHANGED — Accept Offer button exactly as you specified */
 .accept-btn {
-    width: 132px;
-    height: 30px;
+    padding: 8px 10px 8px 10px;
     border-radius: 5px;
     background: #4CAF50;
     color: #FFF;
