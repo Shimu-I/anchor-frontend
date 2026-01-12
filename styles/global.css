@@ -11,6 +11,7 @@
   --bg-dark: #0f242e;
   --primary: #00d4c2;
   --text-light: rgba(255, 255, 255, 0.75);
+   font-family: 'Roboto', sans-serif;
 }
 
 /* Reset */
