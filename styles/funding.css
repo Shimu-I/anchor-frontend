@@ -333,7 +333,7 @@ main {
   font-weight: bold;
   width: 175px;
   
-  /* Link reset properties */
+
   text-decoration: none;
   display: inline-block;
   text-align: center;
@@ -350,35 +350,26 @@ main {
   font-weight: bold;
   width: 175px;
 
-  /* Link reset properties */
+
   text-decoration: none;
   display: inline-block;
   text-align: center;
 }
 
-/* =========================
-   State Enforcers
-   (Fixes the "after click" color change)
-   ========================= */
-
-/* 1. Force white text even if link was visited */
 .donate-btn:visited, 
 .view-btn:visited {
     color: white;
 }
 
-/* 2. Remove underline on hover and keep white text */
 .donate-btn:hover, 
 .view-btn:hover {
     text-decoration: none;
     color: white;
-    /* Optional: Add a slight hover effect if you want */
     opacity: 0.9; 
 }
 
-/* 3. Ensure it looks good while clicking */
 .donate-btn:active, 
 .view-btn:active {
     color: white;
-    transform: translateY(1px); /* Little "press" effect */
+    transform: translateY(1px);
 }

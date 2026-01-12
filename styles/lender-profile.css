@@ -361,3 +361,37 @@ body.fade-in {
     align-items: flex-start;
   }
 }
+
+
+.btn-send-money {
+  background: #bf0000;
+  color: white;
+  border: none;
+  flex: 1;
+  padding: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100px;
+  
+
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+
+.btn-send-money:visited {
+    color: white;
+}
+
+.btn-send-money:hover{
+    text-decoration: none;
+    color: white;
+    opacity: 0.9; 
+}
+
+.btn-send-money:active{
+    color: white;
+    transform: translateY(1px);
+}
