@@ -169,6 +169,9 @@ main {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
 }
 
 .card-header h3 {
@@ -235,48 +238,6 @@ main {
   gap: 12px;
 }
 
-.btn-view {
-  background: rgba(0, 191, 165, 0.45);
-  color: white;
-  border: none;
-  padding: 10px 24px;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn-view:hover {
-  background: rgba(0, 191, 165, 0.7);
-}
-
-.btn-offer {
-  background: #f5b800;
-  color: black;
-  font-weight: bold;
-  padding: 10px 24px;
-  border-radius: 25px;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn-offer:hover {
-  background: #f5d000;
-}
-
-.btn-rating {
-  background: rgba(220, 70, 80, 0.4);
-  color: white;
-  padding: 10px 24px;
-  border-radius: 25px;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn-rating:hover {
-  background: rgba(220, 70, 80, 0.7);
-}
 
 .stats {
   font-size: 14px;
@@ -307,4 +268,54 @@ main {
     width: 100%;
     justify-content: space-between;
   }
+}
+
+
+.btn-offer {
+  background: #f5b800;
+  color: black;
+  font-weight: bold;
+  padding: 10px 24px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  outline: none;
+}
+
+.btn-offer:hover {
+  background: #f5d000;
+}
+
+.btn-rating {
+  background: rgba(220, 70, 80, 0.4);
+  color: white;
+  padding: 10px 24px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  outline: none;
+}
+
+.btn-rating:hover {
+  background: rgba(220, 70, 80, 0.7);
+}
+
+.btn-offer:visited {
+  background: #f5b800;
+  color: black;
+  text-decoration: none;
+}
+
+.btn-rating:visited {
+  background: rgba(220, 70, 80, 0.4);
+  color: white;
+  text-decoration: none;
 }
