@@ -211,22 +211,34 @@ nav a:hover {
 .btn-primary {
   background: var(--primary);
   color: var(--bg-dark);
+  text-decoration: none;
 }
 
 .btn-primary:hover { 
   background: #00b8a9; 
   transform: translateY(-3px); 
+  text-decoration: none;
+}
+
+.btn-primary:visited {
+text-decoration: none;
 }
 
 .btn-secondary {
   background: transparent;
   color: white;
   border: 2px solid var(--primary);
+  text-decoration: none;
 }
 
 .btn-secondary:hover {
   background: rgba(0,212,194,0.1);
   transform: translateY(-3px); 
+  text-decoration: none;
+}
+
+.btn-secondary:visited {
+  text-decoration: none;
 }
 
 /* Hero Images */
@@ -348,3 +360,7 @@ nav a:hover {
 
 .highlight p { color: rgba(255,255,255,0.9); }
 
+
+.btn-primary, .btn-secondary{
+
+}
